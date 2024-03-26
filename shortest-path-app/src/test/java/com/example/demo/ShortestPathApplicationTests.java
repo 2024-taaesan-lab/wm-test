@@ -5,6 +5,7 @@ import com.example.demo.model.Cell;
 import com.example.demo.service.PathService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Arrays;
@@ -15,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class ShortestPathApplicationTests {
 
 	@Autowired
+	@Qualifier("bfsPathServiceImpl")
 	private PathService pathService;
 
 	@Test
@@ -84,11 +86,6 @@ class ShortestPathApplicationTests {
 //		}
 	}
 
-//	@Test
-//	public void testFindShortestPath() {
-//		int[][] grid = {{1, 0, 0}, {1, 1, 0}, {1, 1, 1}};
-//		PathService pathService = new PathService();
-//		Path path = pathService.findShortestPath(grid);
-//	}
+
 
 }
