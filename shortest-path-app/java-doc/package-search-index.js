@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.wavemoney.assessment"},{"l":"com.wavemoney.assessment.controller"},{"l":"com.wavemoney.assessment.dto"},{"l":"com.wavemoney.assessment.model"},{"l":"com.wavemoney.assessment.service"}];updateSearchResults();
