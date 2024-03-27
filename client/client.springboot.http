@@ -1,0 +1,16 @@
+# For ./mvnw spring-boot:run
+###
+POST http://localhost:8080/api/shortest-path
+Content-Type: application/json
+
+{
+  "grid": [
+    [1, 1, 1, 1, 1],
+    [0, 0, 1, 0, 1],
+    [1, 1, 1, 1, 1],
+    [1, 0, 0, 0, 1],
+    [1, 1, 1, 1, 1]
+  ]
+}
+
+

@@ -5,3 +5,9 @@ Due Date: 30 Mar 2024
 
 ## Shortest Path App Project
 [Readme](./shortest-path-app/README.MD)
+
+
+## Kubernetes
+
+minikube addons enable ingress
+minikube tunnel

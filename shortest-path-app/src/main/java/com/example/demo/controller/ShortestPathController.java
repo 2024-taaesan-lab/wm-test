@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/shortest-path")
+@RequestMapping("/api")
 public class ShortestPathController {
 
     private final PathService pathService;
@@ -21,7 +21,7 @@ public class ShortestPathController {
         this.pathService = pathService;
     }
 
-    @PostMapping
+    @PostMapping(value="/shortest-path")
     public ResponseEntity<Path> findShortestPath(@RequestBody GridRequest gridRequest) {
         int[][] grid = gridRequest.getGrid();
         if (grid == null || grid.length == 0 || grid[0].length == 0) {
