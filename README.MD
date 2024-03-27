@@ -37,6 +37,8 @@ docker push taaesan/shortest-path-app:latest
 
 
 ## Kubernetes Deployment (Optional)  
+![K8S](./resources/WaveMoney-K8s.jpg)
+
 I've deployed the application on Kubernetes to provide scalability and for the sake of experimentation. However, setting it up requires several software installations and commands. If you're interested, please refer to the instructions below.
 
 ### Required software
