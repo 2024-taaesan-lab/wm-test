@@ -48,15 +48,17 @@ I've deployed the application on Kubernetes to provide scalability and for the s
 ### Install ingress controller (Minikube)  
 https://kubernetes.github.io/ingress-nginx/deploy/#minikube
 
+
+
+### Instructions
+0. Run the following commands.  
 ```Shell
 minikube start  
 minikube addons enable ingress  
 minikube addons list 
 |ingress| minikube | enabled ✅| Kubernetes|
 minikube tunnel  
-```
-
-### Instructions
+```  
 1. Run kubectl command
 `kubectl apply -f /k8s`  
 2. Check running pod
@@ -68,4 +70,4 @@ shortest-path-app-deployment-7c9fdd8cdc-q8bmw   1/1     Running   0          3h5
 
 ### Load Test
 `k6 run k6/script.k8s.js`  
-![Load Test](./resources/WaveMoney03.jpg)
+![Load Test](./resources/WaveMoney04.gif)
