@@ -2,12 +2,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-service
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
   - http:
       paths:
-      - path: /api
-        pathType: Prefix
+      - path: /api/(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: shortest-path-app-service

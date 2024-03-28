@@ -1,6 +1,6 @@
 name: Java CI with Maven
 env:
-  VERSION: '0.0.4'
+  VERSION: '0.0.7'
 
 on:
   pull_request:

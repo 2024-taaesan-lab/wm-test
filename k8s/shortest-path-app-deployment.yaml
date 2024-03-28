@@ -22,10 +22,26 @@ apiVersion: v1
 kind: Service
 metadata:
   name: shortest-path-app-service
+  labels:
+   component: shortest-path-app
 spec:
   type: ClusterIP
   selector:
     component: shortest-path-app
   ports:
-    - port: 8080
+    - protocol: TCP
+      name: http-traffic
+      port: 8080
       targetPort: 8080
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+ name: spring-boot-app-service-monitor
+spec:
+ selector:
+   matchLabels:
+     component: shortest-path-app
+ endpoints:
+   - port: http-traffic
+     path: "/actuator/prometheus"

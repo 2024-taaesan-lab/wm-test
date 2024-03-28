@@ -42,3 +42,9 @@ Content-Type: application/json
   ]
 }
 
+###
+GET http://127.0.0.1/api/actuator/prometheus
+
+###
+GET http://127.0.0.1/api/actuator/health
+
