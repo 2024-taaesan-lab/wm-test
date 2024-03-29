@@ -8,6 +8,8 @@ The Shortest Path App solves the task of finding the shortest path from the top-
 
 ![Monitoring](./resources/WaveMoney04.jpg)
 
+![Load Test](./resources/WaveMoney04.gif)
+
 ### Required Software
 - Java 17: Download and install the latest Java Development Kit (JDK) 17 from the official Oracle website: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html  
 - Maven 3.9+: Download and install Apache Maven version 3.9 or later from the official Maven website: https://maven.apache.org/download.cgi  
@@ -80,7 +82,6 @@ shortest-path-app-deployment-7c9fdd8cdc-q8bmw   1/1     Running   0          3h5
 
 ### Load Test
 `k6 run k6/script.k8s.js`  
-![Load Test](./resources/WaveMoney04.gif)
 
 ### Monitoring Cluster Resources
 In this project, I aim to enhance cluster resource monitoring using tools like Micrometer, Grafana, and Prometheus. These tools provide valuable insights into the health and performance of the cluster, enabling efficient resource utilization and proactive issue detection.
