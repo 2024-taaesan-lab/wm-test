@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // DOCKER_REGISTRY_CREDENTIALS = credentials('docker-hub-credentials')
-        GITHUB_CREDENTIALS = credentials('github-credentials')
+        GITHUB_CREDENTIALS = credentials('git-test-key')
         DOCKER_IMAGE = 'taaesan/shortest-path-app'
         TAG = ''
     }
