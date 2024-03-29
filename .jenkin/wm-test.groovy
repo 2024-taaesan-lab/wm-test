@@ -5,7 +5,7 @@ pipeline {
     
     environment {
         // DOCKER_REGISTRY_CREDENTIALS = credentials('docker-hub-credentials')
-        GITHUB_CREDENTIALS = credentials('github-credential')
+        GITHUB_CREDENTIALS = credentials('ssh-credential')
         DOCKER_IMAGE = 'taaesan/shortest-path-app'
         TAG = ''
     }
@@ -15,8 +15,8 @@ pipeline {
             steps {
                 script {
                         git branch: 'main',
-                        credentialsId: 'github-credential',
-                        url: 'https://github.com/2024-taaesan-lab/wm-test.git'                
+                        credentialsId: 'ssh-credential',
+                        url: 'git@github.com:2024-taaesan-lab/wm-test.git'                
                     TAG = getLatestTag()
                 }
                 echo "TAG: ${TAG}"
