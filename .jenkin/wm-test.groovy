@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_REGISTRY_CREDENTIALS = credentials('docker-hub-credentials')
+        // DOCKER_REGISTRY_CREDENTIALS = credentials('docker-hub-credentials')
         GITHUB_CREDENTIALS = credentials('github-credentials')
         DOCKER_IMAGE = 'taaesan/shortest-path-app'
         TAG = ''
